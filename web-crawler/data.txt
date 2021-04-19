@@ -1,0 +1,9 @@
+ for blocks in blocks:
+        event_name = blocks.find('a', class_='card__title')
+        event_date = blocks.find('div', class_='card__detail')
+        event_location = blocks.find('div', class_='card__detail')
+        if None in (event_name, event_date, event_location):
+            continue
+        print(event_name.get_text())
+        
+        
